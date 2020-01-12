@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "module": "CommonJS",
+        "esModuleInterop": true,
+        "target": "es2017",
+        "outDir": "lib",
+        "declaration": true,
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "strict": true,
+        "jsx": "react",
+        "strictNullChecks": true,
+        "noEmit": true,
+        "skipLibCheck": true
+    },
+    "include": ["./src"],
+    "exclude": ["node_modules", "public", ".cache"]
+}
