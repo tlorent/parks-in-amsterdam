@@ -6,5 +6,20 @@
 
 module.exports = {
     /* Your site config here */
-    plugins: [`gatsby-plugin-typescript`, `gatsby-plugin-styled-components`],
+    siteMetadata: {
+        title: 'Parks in Amsterdam',
+    },
+    plugins: [
+        `gatsby-plugin-typescript`,
+        `gatsby-plugin-styled-components`,
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `src`,
+                path: `${__dirname}/src/`,
+            },
+        },
+        `gatsby-transformer-remark`,
+        `gatsby-plugin-netlify-cms`,
+    ],
 };

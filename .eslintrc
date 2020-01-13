@@ -16,6 +16,7 @@
     "rules": {
         "prettier/prettier": "warn",
         "react/jsx-indent": ["error", 4],
+        "react/jsx-indent-props": ["error", 4],
         "indent": ["error", 4],
         "quotes": ["error", "single", { "allowTemplateLiterals": true }],
         "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".jsx"] }]
