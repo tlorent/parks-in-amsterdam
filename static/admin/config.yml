@@ -1,17 +1,19 @@
 backend:
     name: github
     repo: tlorent/parks-in-amsterdam
-
 media_folder: static/assets
 public_folder: assets
+locale: 'nl'
+publish_mode: 'editorial_workflow'
 
 collections:
-    - name: blog
-      label: Blog
-      folder: blog
+    - name: parks
+      label: Parks
+      folder: parks
       create: true
       fields:
-          - { name: path, label: Path }
-          - { name: date, label: Date, widget: datetime }
-          - { name: title, label: Title }
-          - { name: body, label: Body, widget: markdown }
+          - { name: path, label: Pad, required: true }
+          - { name: date, label: Datum, widget: datetime, required: true }
+          - { name: title, label: Titel, required: true }
+            - { name: photo, label: Foto, widget: image, required: false }
+          - { name: body, label: Tekst, widget: markdown, required: true }
