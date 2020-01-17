@@ -15,11 +15,19 @@ module.exports = {
         {
             resolve: `gatsby-source-filesystem`,
             options: {
-                name: `blog`,
+                name: `parks`,
                 path: `${__dirname}/parks`,
+            },
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                path: `${__dirname}/static/assets`,
             },
         },
         `gatsby-transformer-remark`,
         `gatsby-plugin-netlify-cms`,
+        `gatsby-plugin-sharp`,
+        `gatsby-transformer-sharp`,
     ],
 };
