@@ -5,4 +5,6 @@ title: 'Vondelpark'
 image: ../static/assets/vondelpark.jpg
 ---
 
-Mooi park!
+## Mooi park!
+
+![Vondelpark](../static/assets/vondelpark.jpg)

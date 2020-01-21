@@ -8,6 +8,7 @@ module.exports = {
     /* Your site config here */
     siteMetadata: {
         title: 'Parks in Amsterdam',
+        author: 'Tim Lorent',
     },
     plugins: [
         `gatsby-plugin-typescript`,
@@ -25,7 +26,20 @@ module.exports = {
                 path: `${__dirname}/static/assets`,
             },
         },
-        `gatsby-transformer-remark`,
+        {
+            resolve: `gatsby-transformer-remark`,
+            options: {
+                plugins: [
+                    {
+                        resolve: `gatsby-remark-images`,
+                        options: {
+                            maxWidth: 800,
+                            linkImagesToOriginal: false,
+                        },
+                    },
+                ],
+            },
+        },
         `gatsby-plugin-netlify-cms`,
         `gatsby-plugin-sharp`,
         `gatsby-transformer-sharp`,
