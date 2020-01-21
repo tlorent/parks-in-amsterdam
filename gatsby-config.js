@@ -40,6 +40,12 @@ module.exports = {
                 ],
             },
         },
+        {
+            resolve: `gatsby-plugin-typography`,
+            options: {
+                pathToConfigModule: `src/utils/typography`,
+            },
+        },
         `gatsby-plugin-netlify-cms`,
         `gatsby-plugin-sharp`,
         `gatsby-transformer-sharp`,

@@ -17,11 +17,24 @@
         "prettier/prettier": "warn",
         "react/jsx-indent": ["error", 4],
         "react/jsx-indent-props": ["error", 4],
-        "indent": ["error", 4],
+        "indent": "off",
         "quotes": ["error", "single", { "allowTemplateLiterals": true }],
         "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".jsx"] }],
         "react-hooks/rules-of-hooks": "error",
-        "react-hooks/exhaustive-deps": "warn" // Checks effect dependencies
+        "react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
+        "import/no-unresolved": [2, { "caseSensitive": false }],
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "js": "never",
+                "jsx": "never",
+                "ts": "never",
+                "tsx": "never"
+            }
+        ],
+        "react/prop-types": [0],
+        "react/jsx-props-no-spreading": [0]
     },
     "parserOptions": {
         "ecmaVersion": 2018,
@@ -33,6 +46,11 @@
     "settings": {
         "react": {
             "version": "detect"
+        },
+        "import/resolver": {
+            "node": {
+                "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
         }
     }
 }
