@@ -42,8 +42,7 @@ const StyledTitle = styled.h2<Props>`
     ${({ size = 'regular' }) => getCss(size)};
 
     > span {
-        border-bottom: ${({ withBorder, theme }) =>
-            withBorder ? `8px solid ${theme.colors.parks50}` : 'none'};
+        border-bottom: ${({ withBorder, theme }) => (withBorder ? `8px solid ${theme.colors.parks50}` : 'none')};
     }
 `;
 

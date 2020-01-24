@@ -18,7 +18,7 @@ const Button: FC<Props> = ({ children, ...props }) => (
 );
 
 const primaryCss = css`
-    background-color: ${(props) => props.theme.colors.parks50};
+    background-color: ${props => props.theme.colors.parks50};
     color: #fff;
 
     :hover,
