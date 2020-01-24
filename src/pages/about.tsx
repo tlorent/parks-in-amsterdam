@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import styled from 'styled-components/macro';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import Title from '../components/atoms/Title';
 import Body from '../components/atoms/Body';
 

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import styled, { keyframes } from 'styled-components/macro';
 import { Link } from 'gatsby';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import Button from '../components/atoms/Button';
 import Title from '../components/atoms/Title';
 import Body from '../components/atoms/Body';
