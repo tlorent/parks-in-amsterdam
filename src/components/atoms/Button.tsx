@@ -1,5 +1,6 @@
 import React, { FC, ButtonHTMLAttributes } from 'react';
-import styled, { css } from 'styled-components/macro';
+import styled, { css, ThemeProvider } from 'styled-components/macro';
+import theme from '../../constants/theme';
 
 export type ButtonVariant = 'primary' | 'outline';
 
@@ -11,11 +12,13 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const Button: FC<Props> = ({ children, ...props }) => (
-    <StyledButton {...props}>{children}</StyledButton>
+    <ThemeProvider theme={theme}>
+        <StyledButton {...props}>{children}</StyledButton>
+    </ThemeProvider>
 );
 
 const primaryCss = css`
-    background-color: #36d39f;
+    background-color: ${(props) => props.theme.colors.parks50};
     color: #fff;
 
     :hover,
@@ -25,12 +28,13 @@ const primaryCss = css`
 `;
 
 const outlineCss = css`
-    border: 1px solid #36d39f;
+    border: 1px solid ${({ theme }) => theme.colors.parks50};
+    background-color: #fff;
 
     :hover,
     :focus {
         color: #fff;
-        background-color: #36d39f;
+        background-color: ${({ theme }) => theme.colors.parks50};
     }
 `;
 

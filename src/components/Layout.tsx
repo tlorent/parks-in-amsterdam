@@ -1,14 +1,15 @@
 import React, { FC } from 'react';
-import styled from 'styled-components/macro';
+import styled, { ThemeProvider } from 'styled-components/macro';
 import Nav from './Nav';
-// import Footer from './Footer';
+import theme from '../constants/theme';
 
 const Layout: FC = ({ children }) => (
-    <Container>
-        <Nav />
-        <div>{children}</div>
-        {/* <Footer /> */}
-    </Container>
+    <ThemeProvider theme={theme}>
+        <Container>
+            <Nav />
+            <div>{children}</div>
+        </Container>
+    </ThemeProvider>
 );
 
 const Container = styled.div`

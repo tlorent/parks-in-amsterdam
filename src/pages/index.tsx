@@ -50,7 +50,7 @@ const Header = styled.div`
 const Background = styled.div`
     position: absolute;
     top: 0;
-    background-color: #36d39f;
+    background-color: ${({ theme }) => theme.colors.parks50};
     width: 152px;
     height: 30px;
     opacity: 0.2;
