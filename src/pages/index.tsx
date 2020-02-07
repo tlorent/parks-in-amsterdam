@@ -5,6 +5,7 @@ import Layout from '../components/Layout';
 import Button from '../components/atoms/Button';
 import Title from '../components/atoms/Title';
 import Body from '../components/atoms/Body';
+import heroImage from '../../static/assets/heroImage.svg';
 
 const Index: FC = () => (
     <Layout>
@@ -21,7 +22,7 @@ const Index: FC = () => (
                     <Button variant="primary">Go to the parks</Button>
                 </Link>
             </Header>
-            <HeroImage src="assets/heroImage.svg" alt="People in the park" />
+            <HeroImage src={heroImage} alt="People in the park" />
         </Container>
     </Layout>
 );

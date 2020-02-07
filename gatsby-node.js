@@ -1,6 +1,20 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require(`path`);
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { createFilePath } = require(`gatsby-source-filesystem`);
+
+exports.onCreateNode = ({ node, getNode, actions }) => {
+    const { createNodeField } = actions;
+    if (node.internal.type === `MarkdownRemark`) {
+        const slug = createFilePath({ node, getNode, basePath: `pages` });
+        createNodeField({
+            node,
+            name: `slug`,
+            value: slug,
+        });
+    }
+};
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
     const { createPage } = actions;
@@ -17,6 +31,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
                     node {
                         frontmatter {
                             path
+                        }
+                        fields {
+                            slug
                         }
                     }
                 }

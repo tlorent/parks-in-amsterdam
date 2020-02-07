@@ -3,8 +3,11 @@
 /* eslint-disable react/prop-types */
 import React, { FC } from 'react';
 import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
+// import Img from 'gatsby-image';
+// import styled from 'styled-components/macro';
 import styled from 'styled-components/macro';
+import Layout from '../components/Layout';
+import Title from '../components/atoms/Title';
 
 interface Props {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -16,14 +19,14 @@ const Template: FC<Props> = ({ data }) => {
     const { frontmatter, html } = markdownRemark;
     console.log(frontmatter);
     console.log(html);
-    const parkImage = frontmatter?.image?.childImageSharp?.fixed;
+    // const parkImage = frontmatter?.image?.childImageSharp?.fixed;
 
     return (
-        <>
-            <p>{frontmatter.title}</p>
-            {parkImage ? <StyledImg fixed={parkImage} /> : null}
-            <div dangerouslySetInnerHTML={{ __html: html }} />
-        </>
+        <Layout>
+            <Title withBorder>{frontmatter.title}</Title>
+            {/* {parkImage ? <StyledImg fixed={parkImage} /> : null} */}
+            <Container dangerouslySetInnerHTML={{ __html: html }} />
+        </Layout>
     );
 };
 
@@ -47,6 +50,10 @@ export const pageQuery = graphql`
     }
 `;
 
-const StyledImg = styled(Img)``;
+const Container = styled.div`
+    /* width: 500px; */
+`;
+
+// const StyledImg = styled(Img)``;
 
 export default Template;

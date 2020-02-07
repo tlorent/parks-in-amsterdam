@@ -38,7 +38,8 @@
         // "no-confusing-arrow": ["error", { "allowParens": true }],
         "no-confusing-arrow": "off",
         "arrow-body-style": "off",
-        "comma-dangle": "off"
+        "comma-dangle": "off",
+        "sort-imports": "off"
     },
     "parserOptions": {
         "ecmaVersion": 2018,
