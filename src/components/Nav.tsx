@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components/macro';
 import { Link } from 'gatsby';
-import logo from '../../static/assets/logo.png';
+// import logo from '../../static/assets/logo.png';
 
 interface LinkProps {
     to: string;
@@ -18,7 +18,7 @@ const ListLink: FC<LinkProps> = ({ to, children }) => (
 const Nav: FC = () => (
     <Navigation>
         <Link to="/">
-            <Logo src={logo} alt="Parks in Amsterdam logo" />
+            {/* <Logo src={logo} alt="Parks in Amsterdam logo" /> */}
         </Link>
         <Links>
             <ListLink to="/parks">Parks</ListLink>

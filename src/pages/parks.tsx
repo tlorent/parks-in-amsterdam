@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { FC } from 'react';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
@@ -17,20 +18,23 @@ const Parks: FC<Props> = ({ data }) => {
         <Layout>
             <Title withBorder>Parks in Amsterdam</Title>
             <Container>
-                {allMarkdownRemark.edges.map(({ node }) => (
+                {allMarkdownRemark.edges.map((edge: any) => (
                     <ParkContainer>
                         {/* <StyledImg
                             src={node.frontmatter.image.publicURL}
                             alt={node.frontmatter.title}
                         /> */}
                         <StyledImg
-                            fixed={node.frontmatter.image.childImageSharp.fixed}
+                            fixed={
+                                edge.node.frontmatter.image.childImageSharp
+                                    .fixed
+                            }
                         />
                         <StyledLink
-                            to={`/parks/${node.fields.slug}`}
-                            key={node.frontmatter.title}
+                            to={`/parks/${edge.node.fields.slug}`}
+                            key={edge.node.frontmatter.title}
                         >
-                            {node.frontmatter.title}
+                            {edge.node.frontmatter.title}
                         </StyledLink>
                     </ParkContainer>
                 ))}

@@ -4,7 +4,7 @@ import Layout from '../components/Layout';
 import Title from '../components/atoms/Title';
 import Body from '../components/atoms/Body';
 import NewsLetterForm from '../components/NewsletterForm';
-import about from '../../static/assets/about.svg';
+// import about from '../../static/assets/about.svg';
 
 const About: FC = () => (
     <>
@@ -19,7 +19,7 @@ const About: FC = () => (
                         trees and relax in nature.
                     </Body>
                 </div>
-                <AboutImage src={about} alt="Two men in the park" />
+                {/* <AboutImage src={about} alt="Two men in the park" /> */}
                 <NewsLetterForm />
 
                 {/* <form
