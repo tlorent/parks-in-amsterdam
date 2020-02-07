@@ -3,6 +3,7 @@ import styled from 'styled-components/macro';
 import Layout from '../components/Layout';
 import Title from '../components/atoms/Title';
 import Body from '../components/atoms/Body';
+import NewsLetterForm from '../components/NewsletterForm';
 
 const About: FC = () => (
     <>
@@ -18,9 +19,9 @@ const About: FC = () => (
                     </Body>
                 </div>
                 <AboutImage src="assets/about.svg" alt="Two men in the park" />
-                {/* <NewsLetterForm /> */}
+                <NewsLetterForm />
 
-                <form
+                {/* <form
                     name="contact"
                     method="POST"
                     data-netlify="true"
@@ -30,16 +31,12 @@ const About: FC = () => (
                     <input type="hidden" name="form-name" value="contact" />
                     <p>
                         <label htmlFor="name">
-                            Your Name: 
-{' '}
-<input type="text" name="name" />
+                            Your Name: <input type="text" name="name" />
                         </label>
                     </p>
                     <p>
                         <label htmlFor="email">
-                            Your Email: 
-{' '}
-<input type="email" name="email" />
+                            Your Email: <input type="email" name="email" />
                         </label>
                     </p>
                     <p>
@@ -53,15 +50,13 @@ const About: FC = () => (
                     </p>
                     <p>
                         <label htmlFor="message">
-                            Message: 
-{' '}
-<textarea name="message" />
+                            Message: <textarea name="message" />
                         </label>
                     </p>
                     <p>
                         <button type="submit">Send</button>
                     </p>
-                </form>
+                </form> */}
             </Container>
         </Layout>
     </>
